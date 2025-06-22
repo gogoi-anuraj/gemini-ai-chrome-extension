@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="top">
+        <div id="new-chat-btn" class="new-chat">
+          <img src="../images/plus_icon.png" alt="plus" />
+        </div>
+      </div>
+      <div class="bottom">
+        <div id="theme-toggle" class="bottom-item">
+          <img class="light-img" src="../images/brightness.png" alt="ques" />
+          <img class="dark-img" src="../images/moon.png" alt="ques" />
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="nav">
+        <p>Ask Gemini</p>
+        <img id="nav-img" src="../images/profile.png" alt="user" />
+      </div>
+      <div class="main-container">
+        <div id="greet-section" class="greet">
+          <p>
+            <span>Hello,</span>
+          </p>
+          <p>How can I help you today?</p>
+        </div>
+
+        <div id="result-section" class="result">
+          <!--hidden -->
+          <div class="result-title">
+            <p id="recent-prompt-display"></p>
+            <img src="../images/profile.png" alt="" />
+          </div>
+          <div class="result-data">
+            <img src="../images/gemini_icon.png" alt="" />
+
+            <div id="loader" class="loader">
+              <hr />
+              <hr />
+              <hr />
+            </div>
+
+            <p id="result-data-display"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-bottom">
+        <div class="summarise-section">
+          <select id="summary-type">
+            <option value="brief">Brief</option>
+            <option value="detailed">Detailed</option>
+            <option value="bullets">Bullet</option>
+          </select>
+          <button id="summarize-btn">Summarize Article Page</button>
+          <button id="copy-btn">Copy</button>
+        </div>
+
+        <div class="search-box">
+          <input
+            id="user-input"
+            type="text"
+            placeholder="Enter a prompt here"
+          />
+          <div>
+            <img id="send-button" src="../images/send_icon.png" alt="" />
+          </div>
+        </div>
+        <p class="bottom-info">
+          Gemini may display inaccurate info, so double-check its responses
+        </p>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

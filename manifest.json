@@ -1,0 +1,25 @@
+{
+  "name": "Gemini Chat",
+  "version": "0.1",
+  "manifest_version": 3,
+  "description": "Ask gemini AI any question; also can summarise article pages.",
+  "permissions": ["scripting", "activeTab", "storage"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"],
+  "options_page": "/options/options.html",
+
+  "action": {
+    "default_popup": "/popup/popup.html",
+    "default_icon": "/images/gemini_icon.png",
+    "default_title": "Ask Gemini"
+  }
+}
